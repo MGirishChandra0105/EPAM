@@ -1,6 +1,7 @@
 import java.util.*;
 
 
+
 /**
  * A fix-sized array of students
  * array length should always be equal to the number of stored elements
@@ -44,7 +45,7 @@ public class StudentGroup implements StudentArrayOperation{
 
 
 
-     if(students==null)
+     if(this.students==null)
  		{
  			throw new IllegalArgumentException ("error");
  		}
@@ -65,12 +66,17 @@ public class StudentGroup implements StudentArrayOperation{
 	public Student getStudent(int index) {
 		// Add your implementation here
 		try{
+		     if(this.students==null)
+ 		{
+ 			throw new IllegalArgumentException ("error");
+ 		}
 
 
 
 
 
-		if((index<0) || (index>=students.length))
+
+		else if((index<0) || (index>=students.length))
 
 
 		{
@@ -160,9 +166,21 @@ public class StudentGroup implements StudentArrayOperation{
 
 	@Override
 	public void removeFromElement(Student student) {
-		// Add your implementation here
-	}
+	    try{
 
+	     if(this.students==null)
+ 		{
+ 			throw new IllegalArgumentException ("error");
+ 		}
+	    }
+
+catch(Exception e)
+{
+
+}		// Add your implementation here
+
+
+	}
 	@Override
 	public void removeToIndex(int index) {
 		// Add your implementation here
