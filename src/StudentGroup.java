@@ -113,7 +113,6 @@ public class StudentGroup implements StudentArrayOperation{
 	public void addFirst(Student student) {
 
 
-
  	// Add your implementation here
 
 
@@ -132,7 +131,21 @@ public class StudentGroup implements StudentArrayOperation{
 
 	@Override
 	public void remove(int index) {
+	    try{
+
+	     if((index<0) || (index>=students.length))
+        {
+           throw new IllegalArgumentException ("ERROR");
+        }
+
+
+
+    }
+      catch(Exception e)
+    {
+
 		// Add your implementation here
+	}
 	}
 
 	@Override
@@ -206,5 +219,7 @@ public class StudentGroup implements StudentArrayOperation{
 		// Add your implementation here
 		return null;
 	}
-
 }
+
+
+
